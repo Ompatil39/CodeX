@@ -1,4 +1,4 @@
-package com.example.codex
+package com.snapbudget.ocr
 
 import org.junit.Test
 

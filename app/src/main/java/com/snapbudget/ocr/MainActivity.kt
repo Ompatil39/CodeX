@@ -1,4 +1,4 @@
-package com.example.codex
+package com.snapbudget.ocr
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
