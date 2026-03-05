@@ -5,12 +5,12 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- Background circle -->
+    <!-- Background - dark circle matching adaptive icon -->
     <path
         android:fillColor="#0F1117"
-        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
 
-    <!-- Outer ring -->
+    <!-- Outer brand ring -->
     <path
         android:strokeColor="#00D68F"
         android:strokeWidth="2.5"
@@ -37,7 +37,7 @@
         android:strokeLineCap="round"
         android:pathData="M45,51 L63,51 M45,57 L61,57 M45,63 L58,63" />
 
-    <!-- Small ₹ symbol -->
+    <!-- Rupee symbol -->
     <path
         android:fillColor="#0F1117"
         android:pathData="M50,49 L57,49 L54,53 C55,53 56,54 56,55 C56,57 55,58 53,58 L58,61 L56,61 L51,58 L51,56 L53,56 C54,56 54,56 54,55 C54,55 54,54 53,54 L50,54 Z" />
