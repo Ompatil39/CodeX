@@ -5,17 +5,19 @@
 
 ## Team Details
 
-- **Team Name:**
-- **Members:**
-- **Domain:**
+- **Team Name:** CodeX
+- **Members:** Shubham,Om,Tanmay,Sujal
+- **Domain:** FinTech
 
 ---
 
 ## Project
 
-**Problem:** 
+**Problem:** FM-01
+SnapBudget OCR:
+Most people stop using money trackers because manual entry is hard. Build a "Simple Money Tracker" that uses OCR to scan physical receipts and automatically categorizes spending with 99% accuracy.
 
-**Solution:** 
+**Solution:** SnapBudget uses a hybrid intelligent receipt-processing engine that combines computer vision, OCR, rule-based parsing, fuzzy correction, and lightweight AI reasoning to automatically extract and categorize spending from receipt images.
 
 ---
 
