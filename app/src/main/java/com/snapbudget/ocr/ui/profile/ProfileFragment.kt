@@ -1,6 +1,7 @@
 package com.snapbudget.ocr.ui.profile
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,12 +11,14 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.google.firebase.auth.FirebaseAuth
 import com.snapbudget.ocr.R
 import com.snapbudget.ocr.data.db.AppDatabase
 import com.snapbudget.ocr.data.repository.TransactionRepository
 import com.snapbudget.ocr.databinding.FragmentProfileBinding
 import com.snapbudget.ocr.ocr.OcrPipelineConfig
 import com.snapbudget.ocr.ocr.OcrPipelineMode
+import com.snapbudget.ocr.ui.auth.LoginActivity
 import kotlinx.coroutines.launch
 
 class ProfileFragment : Fragment() {
@@ -32,8 +35,17 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        displayUserInfo()
         setupClickListeners()
         setupOcrModeSelector()
+    }
+
+    private fun displayUserInfo() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            binding.txtUserName.text = user.displayName ?: "SnapBudget User"
+            binding.txtUserEmail.text = user.email ?: ""
+        }
     }
 
     private fun setupClickListeners() {
@@ -43,6 +55,13 @@ class ProfileFragment : Fragment() {
 
         binding.rowClearData.setOnClickListener {
             showClearDataConfirmation()
+        }
+
+        binding.rowLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
     }
 

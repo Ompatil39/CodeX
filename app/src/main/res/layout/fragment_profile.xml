@@ -63,12 +63,14 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/txtUserName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SnapBudget User"
                         android:textAppearance="@style/TextAppearance.SnapBudget.Headline2" />
 
                     <TextView
+                        android:id="@+id/txtUserEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="v1.0"
@@ -398,6 +400,31 @@
                         android:text="Clear All Data"
                         android:textAppearance="@style/TextAppearance.SnapBudget.BodyMedium"
                         android:textColor="@color/danger" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_subtle" />
+
+                <!-- Logout Row -->
+                <LinearLayout
+                    android:id="@+id/rowLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_min_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/spacing_4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textAppearance="@style/TextAppearance.SnapBudget.BodyMedium"
+                        android:textColor="@color/warning" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
